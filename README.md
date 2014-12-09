@@ -5,6 +5,12 @@ Acortador de URLs de la Universidad de Granada
 
 sluger es una aplicación de la Oficina de Software Libre (http://osl.ugr.es/) de la Universidad de Granada (http://www.ugr.es/) que permite crear atajos con URLs cortas y redireccionar al usuario a través de ellas (smilar a servicios como tinyurl o ATAJA). 
 
+Este software está actualmente en uso en http://sl.ugr.es
+
+Su nombre iba a ser "SLUGR" (Short Link UGR) pero, por una errata, se acabó llamando "sluger".
+
+Originalmente, este proyecto se hospedaba en la forja de RedIris en https://forja.rediris.es/projects/osl-ugr/
+
 ##Requisitos:
 
 Apache con mod_rewrite habilitado.
