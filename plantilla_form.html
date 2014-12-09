@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
+<head>
+<title>Short URL</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta name="author" content="" />
+<meta name="description" content="Genrador de URLs cortas por la Oficina de Software Libre de la Universidad de Granada" />
+<meta name="keywords" content="short url uri corta" />
+<link href="estilo.css" rel="STYLESHEET" media="screen" type="text/css" />
+<link rel="shortcut icon" href="http://osl.ugr.es/favicon.ico" />
+</head>
+<body>
+<div id="centro" class="contenedor">
+<p>Introduzca la URL que desea acortar:</p>
+<form action="">
+<input type="hidden" name="modo" value="new">
+<p>URL: <input type="text" name="url" value=""></p>
+<p>Tambi&eacute;n puede elegir un mombre corto (ID)</p>
+<p>ID: <input type="text" name="myid" value=""> (<em>opcional</em>)</p>
+<input class="boton" type="submit" name="submit" value="Crear">
+</form>
+</div>
+<div class="navega">
+<p><a href="ayuda.html">Ayuda</a> | <a href="api.html">API</a> | <a href="licencia.html">Licencia</a> <a href='javascript:%28function%28%29%7B%0Awindow.open%28%27http%3A%2F%2Fsl.ugr.es%2Fsluger.php%3Fmodo%3Dnew%26url%3D%27%2BencodeURI%28document.location.href%29%29%0A%7D%29%28%29'>Bookmarklet</a></p>
+</div>
+</body>
+</html>

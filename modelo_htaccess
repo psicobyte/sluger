@@ -1,0 +1,9 @@
+DirectoryIndex sluger.php
+Options -Indexes
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_METHOD} GET
+Rewriterule ^([^/=?\.]{4,})$ sluger.php?modo=go&url=$1 [L]
+Rewriterule ^stats/([^/]{4,})$ sluger.php?modo=stats&url=$1 [L]
+</IfModule>

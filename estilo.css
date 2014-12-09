@@ -1,0 +1,138 @@
+body {
+	text-align: center;
+	background-color: #ffffff;
+	background-image: url(./mescudougr.gif);
+	background-repeat: no-repeat;
+	background-position: top right;
+	margin: 10em;
+	padding: 1em;
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: .9em;
+}
+
+
+
+div.contenedor {
+	position: absolute;
+	text-align: left;
+	left: 50%;
+	top: 50%;
+	height: 200px;
+	margin-top: -100px;
+	width: 500px;
+	margin-left: -250px;
+	background-color: #ffffff;
+	background-image: url(./oslpingus.png);
+	background-repeat: no-repeat;
+	background-position: top right;
+	border: solid 1px #000000;
+}
+
+
+div.contenedor p {
+	margin-right: 200px;
+	margin-left: 10px;
+	text-align: left;
+}
+
+
+div.largo p {
+	margin-right: 200px;
+	margin-left: 10px;
+	text-align: left;
+}
+
+div.largo {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	height: 500px;
+	margin-top: -250px;
+	width: 500px;
+	margin-left: -250px;
+	background-color: #ffffff;
+	background-image: url(./oslpingus.png);
+	background-repeat: no-repeat;
+	background-position: top right;
+	border: solid 1px #000000;
+	text-align: left;
+}
+
+div.stats {
+
+	
+	text-align: left;
+	width: 500px;
+	margin: auto;
+	background-color: #ffffff;
+	background-image: url(./oslpingus.png);
+	background-repeat: no-repeat;
+	background-position: top right;
+	border: solid 1px #000000;
+}
+
+div.resumen {
+	height: 200px;
+}
+
+div.navegastats {
+
+	margin: auto;
+	width: 500px;
+	background-color: #ffffff;
+	border: solid 1px #000000;
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+div.navega {
+position: absolute;
+	left: 50%;
+	top: 50%;
+	height: 50px;
+	margin-top: 100px;
+	width: 500px;
+	margin-left: -250px;
+	background-color: #ffffff;
+	border: solid 1px #000000;
+	text-align: left;
+}
+
+
+div.navega p {
+text-align: center;
+}
+
+div.navegayuda {
+position: absolute;
+	left: 50%;
+	top: 50%;
+	height: 50px;
+	margin-top: 250px;
+	width: 500px;
+	margin-left: -250px;
+	background-color: #ffffff;
+	border: solid 1px #000000;
+	text-align: left;
+}
+
+
+div.navegayuda p {
+text-align: center;
+}
+
+.boton {
+margin-left: 250px;
+text-align: left;
+}
+

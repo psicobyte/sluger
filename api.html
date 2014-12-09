@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
+<head>
+<title>Short URL</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta name="author" content="" />
+<meta name="description" content="Genrador de URLs cortas por la Oficina de Software Libre de la Universidad de Granada" />
+<meta name="keywords" content="short url uri corta" />
+<link href="estilo.css" rel="STYLESHEET" media="screen" type="text/css" />
+<link rel="shortcut icon" href="http://osl.ugr.es/favicon.ico" />
+</head>
+<body>
+<div id="centro" class="largo">
+<p>API</p>
+<p>La API de slugEr permite a otras aplicaciones interactuar directamente con el programa.</p>
+<p>Solicitud:</p>
+<code>http://sl.ugr.es/sluger.php?modo=JASON&url=www.direccion.larga.com&id=NombreCorto</code>
+<ul>
+<li>url: La URL larga de la que se quiere crear una versi&oacute;n corta (debe estar en urlencode).</li>
+<li>id: (opcional) La cadena para definir tu propia URL corta (de 5 a 50 caracteres).</li>
+</ul>
+<p>ejemplo: la cadena "NombreCorto" crear&iacute;a la URL "http://sl.ugr.es/NombreCorto".</p>
+<p>Respuesta:</p>
+<code>{"url":"URL","error":"0|1","text":"Texto (mas o menos) descriptivo"}</code>
+<ul>
+<li>url: La URL corta creada, si es el caso. En caso de error contendr&aacute; una cadena vac&iacute;a.</li>
+<li>error: Contendr&aacute; 1 si se ha creado la URL, y 0 si ha habido alg&uacute;n error y no ha podido crearse.</li>
+<li>text: Texto explicativo del error, si lo hubiere. En caso de que no haya error retornar&aacute; el texto "URL Creada".</li>
+</ul>
+</div>
+<div class="navegayuda">
+<p><a href=".">Inicio</a> | <a href="ayuda.html">Ayuda</a> | <a href="licencia.html">Licencia</a></p>
+</div>
+</body>
+</html>
