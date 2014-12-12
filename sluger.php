@@ -413,6 +413,89 @@ function FiltraIP(){
 }
 
 
+// retorna true si existe la lista negra y la ip está en ella
+function BlackList(){
+
+    $BlackList= 'blacklist.txt';
+
+    $ip= $_SERVER['REMOTE_ADDR'];
+
+    $fichero = @fopen($BlackList, "r");
+
+    if ($fichero) {
+
+        while (($entrada = fgets($fichero, 512)) !== false) {
+            $lineas[]= rtrim($entrada);
+        }
+        fclose($lineas);
+
+        foreach ($lineas as $patron){
+
+            if (preg_match('/^.{1,3}\..{1,3}\..{1,3}\..{1,3}\z/', $patron)){
+
+                    if (ComparaIP($ip,$patron)){
+                        return true;
+                    }
+            }
+        }
+
+        return false;
+    }
+
+    else {
+        return false;
+    }
+}
+
+
+// retorna true si NO existe la lista blanca, o si existe y la ip está en ella
+function WitheList(){
+
+    $WitheList= 'withelist.txt';
+
+    $ip= $_SERVER['REMOTE_ADDR'];
+
+    $fichero = @fopen($WitheList, "r");
+
+    if ($fichero) {
+
+        while (($entrada = fgets($fichero, 512)) !== false) {
+            $lineas[]= rtrim($entrada);
+        }
+        fclose($lineas);
+
+        foreach ($lineas as $patron){
+
+            if (preg_match('/^.{1,3}\..{1,3}\..{1,3}\..{1,3}\z/', $patron)){
+
+                    if (ComparaIP($ip,$patron)){
+                        return true;
+                    }
+            }
+        }
+
+        return false;
+
+    }
+    else {
+        return true;
+    }
+}
+
+
+// Retorna true si la IP en $ip concide con el patron (del tipo 192.168.*.*) en $patron
+function ComparaIP($ip,$patron){
+
+    $ipArr= explode( '.' , $ip);
+    $patronArr= explode( '.' , $patron);
+
+    for ($i = 0; $i <= 3; $i++) {
+        if ($patronArr[$i] != "*" && $patronArr[$i] != $ipArr[$i]){
+            return false;
+        }
+    }
+    return true;
+}
 
 
 //Si todo ha ido bien, muestra el resultado en una página al efecto:
