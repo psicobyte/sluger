@@ -449,13 +449,13 @@ function BlackList(){
 
 
 // retorna true si NO existe la lista blanca, o si existe y la ip está en ella
-function WitheList(){
+function WhiteList(){
 
-    $WitheList= 'withelist.txt';
+    $WhiteList= 'whitelist.txt';
 
     $ip= $_SERVER['REMOTE_ADDR'];
 
-    $fichero = @fopen($WitheList, "r");
+    $fichero = @fopen($WhiteList, "r");
 
     if ($fichero) {
 
