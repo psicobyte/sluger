@@ -19,11 +19,13 @@ MySQL
 
 ##Instalación:
 
-Crear la Base de Datos "sluger" usando el script SQL "DataBase.sql".
+Crear la Base de Datos "sluger".
 
-Necesitará un usuario con permisos de lectura/escritura en esa BD.
+Crear las tablas en la base de datos usando el script SQL "DataBase.sql".
 
-Copiar al directorio raiz del dominio que va a usarse los archivos sluger.php, modelo_htacces y, opcionalmente, las plantillas, ayuda, hoja de estilo e imágenes.
+Crear un usuario con permisos de lectura/escritura en esa BD.
+
+Copiar al directorio raiz del dominio que va a usarse los archivos sluger.php, modelo_htacces y, opcionalmente, el directorio templates conteniendo las plantillas, ayuda, hoja de estilo e imágenes.
 
 Renombrar o copiar el archivo "modelo_htacces" a ".htacces".
 
