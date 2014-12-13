@@ -395,21 +395,13 @@ function Pantallacrea(){
 // Esto es una exigencia del "cliente": Permite dar de alta direcciones sólo a IPs de la UGR (más o menos).
 // Está comentada para que no de guerra.
 function FiltraIP(){
-/*
-    $permitida = "150.214";
-    
-    $fragmentoIP= substr($_SERVER['REMOTE_ADDR'], 0, 7); 
 
-    if ($fragmentoIP == $permitida){
+    if  (WhiteList() && !BlackList()){
         return true;
     }
-    else {
+    else{
         return false;
     }
-*/
-
-// Si se descomenta lo de arriba, comentar este return para cancelarlo:
-    return true;
 }
 
 
