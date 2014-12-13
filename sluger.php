@@ -7,7 +7,6 @@ Copyright 2009 Allan Psicobyte
 sluger es una aplicación de la Oficina de Software Libre (http://osl.ugr.es/) de la Universidad de Granada (http://www.ugr.es/) que permite crear atajos con URLs cortas y redireccionar al usuario a través de ellas (smilar a servicios como tinyurl o ATAJA). 
 
 Es software libre y se distribuye bajo una licencia Affero (AFFERO GENERAL PUBLIC LICENSE: http://www.affero.org/oagpl.html).
-
 This program is free software and it's licensed under the AFFERO GENERAL PUBLIC LICENSE (http://www.affero.org/oagpl.html).
 
  
@@ -382,7 +381,7 @@ function Pantallacrea(){
 
 
     //Si no existe o no encuentra la plantilla, muestra una página por defecto
-    if (!@include("plantilla_form.html")){
+    if (!@include("template/form.html")){
         echo '<html><head><title>Short URL</title></head><p>Introduzca la URL que desea acortar:</p><form action=""><input type="hidden" name="modo" value="new"><p>URL: <input type="text" name="url" value=""></p><p>Tambi&eacute;n puede elegir un mombre corto (ID)</p><p>ID: <input type="text" name="myid" value=""> (<em>opcional</em>)</p><input class="boton" type="submit" name="submit" value="Crear"></form><body></body></html>';
     }
 
@@ -501,7 +500,7 @@ if ($Especial=='JASON'){
     }
     else{
         //Si no existe o no encuentra la plantilla, muestra una página por defecto
-        if (!@include("plantilla_result.html")){
+        if (!@include("template/result.html")){
             echo '<html><head><title>Short URL</title></head><p>Se ha creado la URL corta '. $_SERVER['HTTP_HOST'] . '/' . $id  .'</p><body></body></html>';
         }
     }
@@ -650,7 +649,7 @@ function MuestraError($Iderror){
     }
     else{
         //Si no existe o no encuentra la plantilla, muestra una página por defecto
-        if (!@include("plantilla_error.html")){
+        if (!@include("template/error.html")){
             echo '<html><head><title>Short URL</title></head><body>'. $TextoError .'</body></html>';
         }
     }
@@ -693,7 +692,7 @@ function MuestraStats($visitas,$lista,$creada){
     $Tabla.= '</table>'."\n";
     
         //Si no existe o no encuentra la plantilla, muestra una página por defecto
-        if (!@include("plantilla_stats.html")){
+        if (!@include("template/stats.html")){
             echo '<html><head><title>Short URL</title></head><body><p>N&uacute;mero de visitas totales: '. $visitas .'</p>';
             echo $Tabla;
             echo '</body></html>';
