@@ -29,7 +29,7 @@ Renombrar o copiar el archivo "modelo_htacces" a ".htacces".
 
 Editar, en la función Init() del archivo sluger.php, los datos de usuario y contraseña para la conexión a la BD.
 
-##Blacklist y WhiteList
+##BlackList y WhiteList
 
 sluger permite usar dos archivos, blacklist.txt y whitelist.txt, como lista negra y lista blanca respectivamente.
 
@@ -42,9 +42,12 @@ El uso como redireccionador (no para crear URLs, sino para acceder a las direcci
 un patrón de IP tiene una forma como las siguientes:
 
 192.168.1.1 (indica esa dirección concreta)
-192.168.1.* (indica un rango de direcciones desde 192.168.1.1 a 192.168.1.255)
-192.168.*.1 (indica un rango de direcciones desde 192.168.1.1 a 192.168.255.1, cambiando sólo el segundo nivel)
-*.*.*.* (indica todas las direcciones IP)
+
+192.168.1.\* (indica un rango de direcciones desde 192.168.1.1 a 192.168.1.255)
+
+192.168.\*.1 (indica un rango de direcciones desde 192.168.1.1 a 192.168.255.1, cambiando sólo el segundo nivel)
+
+\*.\*.\*.\* (indica todas las direcciones IP)
 
 Para que una IP sea aceptada, debe cumplir ambos criterios: NO aparecer en blacklist.txt y SI aparecer en whitelist.txt. De este modo, si una IP coincide con patrones existente en ambas listas a la vez, no será admitida.
 
@@ -52,7 +55,7 @@ Si no existen ni whitelist.txt ni blacklist.txt, todas las IPs serán aceptadas.
 
 ##API:
 
-La API de slugEr permite a otras aplicaciones interactuar directamente con el programa.
+La API de sluger permite a otras aplicaciones interactuar directamente con el programa.
 
 ###Solicitud:
 
