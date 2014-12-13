@@ -9,7 +9,7 @@ Este software está actualmente en uso en http://sl.ugr.es
 
 Su nombre iba a ser "SLUGR" (Short Link UGR) pero, por una errata, se acabó llamando "sluger".
 
-Originalmente, este proyecto se hospedaba en la forja de RedIris en https://forja.rediris.es/projects/osl-ugr/
+Originalmente, este proyecto se hospedaba en la forja de RedIris en https://forja.rediris.es/plugins/scmsvn/viewcvs.php/sluger/?root=osl-ugr
 
 ##Requisitos:
 
