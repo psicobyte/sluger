@@ -140,7 +140,7 @@ function Crear($url){
     global $Conexion;
 
     if (!TestURL($url)){
-    $url= 'http://'. $url;
+        $url= 'http://'. $url;
     }
 
     $escapada= mysql_real_escape_string($url);
@@ -283,7 +283,6 @@ function Buscar_por_id($id){
     $escapada= Cad_Num($id);
 
     if (preg_match('"^ERROR:"',$escapada)) {
-
         return 'ERROR:inválido';
     }
     else {
@@ -295,7 +294,6 @@ function Buscar_por_id($id){
         }
         mysql_free_result($result);
         if ($url!=''){
-
             return $url;
         }
         else {
@@ -309,28 +307,29 @@ function Buscar_por_id($id){
 function Buscar_por_id_propia($id){
     global $Conexion;
 
-        $escapada= mysql_real_escape_string($id);
+    $escapada= mysql_real_escape_string($id);
 
-        $sql="SELECT * FROM elegidas WHERE id='".$escapada."';";
-        $result=mysql_query($sql,$Conexion);
+    $sql="SELECT * FROM elegidas WHERE id='".$escapada."';";
+    $result=mysql_query($sql,$Conexion);
 
-        while($row = mysql_fetch_array($result)) {
-            $url=$row["url"];
-        }
-        mysql_free_result($result);
-        if ($url!=''){
+    while($row = mysql_fetch_array($result)) {
+        $url=$row["url"];
+    }
+    mysql_free_result($result);
 
-            return $url;
-        }
-        else {
-            return 'ERROR:noexiste';
-        }
+    if ($url!=''){
+        return $url;
+    }
+    else {
+        return 'ERROR:noexiste';
+    }
 }
 
 
 // Guarda un log de accesos
 function Logea($id){
     global $Conexion;
+
     $fecha= date("Y-m-d H:i:s");
     $refer= $_SERVER['HTTP_REFERER'];
     $sql="INSERT INTO log (idpag, fecha, refer) VALUES ('".$id."','".$fecha."','".$refer."');";
@@ -388,9 +387,9 @@ function BlackList(){
 
             if (preg_match('/^.{1,3}\..{1,3}\..{1,3}\..{1,3}\z/', $patron)){
 
-                    if (ComparaIP($ip,$patron)){
-                        return true;
-                    }
+                if (ComparaIP($ip,$patron)){
+                    return true;
+                }
             }
         }
 
@@ -423,9 +422,9 @@ function WhiteList(){
 
             if (preg_match('/^.{1,3}\..{1,3}\..{1,3}\..{1,3}\z/', $patron)){
 
-                    if (ComparaIP($ip,$patron)){
-                        return true;
-                    }
+                if (ComparaIP($ip,$patron)){
+                    return true;
+                }
             }
         }
 
