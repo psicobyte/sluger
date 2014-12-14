@@ -354,8 +354,7 @@ function Pantallacrea(){
 }
 
 
-// Esto es una exigencia del "cliente": Permite dar de alta direcciones sólo a IPs de la UGR (más o menos).
-// Está comentada para que no de guerra.
+// Filtro para permitir o bloquear ciertas IPs (bsado en listas blanca y negra.
 function FiltraIP(){
 
     if  (WhiteList() && !BlackList()){
