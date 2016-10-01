@@ -21,7 +21,7 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
 CREATE TABLE IF NOT EXISTS `direcciones` (
   `id` int(11) NOT NULL auto_increment,
-  `url` varchar(256) collate utf8_spanish_ci NOT NULL,
+  `url` varchar(512) collate utf8_spanish_ci NOT NULL,
   `creada` datetime NOT NULL,
   PRIMARY KEY  (`id`),
   KEY `creada` (`creada`),
@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `direcciones` (
 
 CREATE TABLE IF NOT EXISTS `elegidas` (
   `id` varchar(50) collate utf8_spanish_ci NOT NULL,
-  `url` varchar(256) collate utf8_spanish_ci NOT NULL,
+  `url` varchar(512) collate utf8_spanish_ci NOT NULL,
   `creada` datetime NOT NULL,
   PRIMARY KEY  (`id`),
   KEY `url` (`url`),
